@@ -1,0 +1,55 @@
+<html>
+<body>
+<?php
+
+echo "Super Globals<br><br>";
+
+//$GLOBALS
+
+function globals() {
+    $test = "local variable";
+
+    echo '$test in global scope: ' . $GLOBALS["test"] . "\n";
+	echo "<br><br>";
+    echo '$test in current scope: ' . $test . "\n";
+	echo "<br><br>";
+}
+
+$test = "Example content";
+globals();
+
+//$_SERVER
+
+echo $_SERVER['SERVER_NAME'];
+
+//$_GET
+
+print_r($_GET);
+if($_GET["a"] === "") echo "a is an empty string\n";
+if($_GET["a"] === false) echo "a is false\n";
+if($_GET["a"] === null) echo "a is null\n";
+if(isset($_GET["a"])) echo "a is set\n";
+if(!empty($_GET["a"])) echo "a is not empty";
+
+echo "<br><br>"
+
+?>
+
+<!-- $POST -->
+<form action="post.php" method="get">
+Name: <input type="text" name="name"><br>
+<input type="submit">
+</form>
+
+<!--$_FILES -->
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit">
+</form>
+
+
+<?php
+?>
+</body>
+</html>
