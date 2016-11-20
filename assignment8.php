@@ -37,6 +37,28 @@ var_dump($prop->getValue($obj));
 
 echo "<br><br>";
 
+//ReflectionProperty  getDocComment
+
+class Str
+{
+    public $length = 5;
+}
+
+$prop = new ReflectionProperty('Str', 'length');
+
+var_dump($prop->getDocComment());
+
+echo "<br><br>";
+
+//ReflectionProperty setValue
+
+echo "Reflection Property setValue";
+$a = new A();
+$reflection = new \ReflectionClass($a);
+$property = $reflection->getProperty('privateProperty');
+$property->setAccessible(true);
+$property->setValue($a, 'hi');
+echo $a->getPrivateProperty();
 
 
 
