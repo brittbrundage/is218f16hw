@@ -63,18 +63,37 @@ if(!isset($_COOKIE[$cookie_name])) {
      echo "Cookie '" . $cookie_name . "' is set!<br>";
      echo "Value is: " . $_COOKIE[$cookie_name];
 }
-echo "<br><br>";
+
 echo "**Refresh page to see cookie value<br><br>";
 
 //$_SESSION
 
 session_start();
 
-$_SESSION["favoritecolor"] = "red";
-$_SESSION["favoriteanimal"] = "dog";
-echo "Session variables are set.";
+$_SESSION["favoritecolor"] = "red<br>";
+$_SESSION["favoriteanimal"] = "dog<br>";
+echo "Session variables are set.<br>";
+
+print_r($_SESSION)
 
 //$_REQUEST
+?>
+<br><br>
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Name: <input type="text" name="fname">
+  <input type="submit">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_REQUEST['fname'];
+    if (empty($name)) {
+        echo "Name is empty";
+    } else {
+        echo $name;
+    }
+}
+ echo "<br><br>";
 
 //$_ENV
 
