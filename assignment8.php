@@ -1,4 +1,5 @@
 <?php
+
 echo "Working with Objects and References<br><br>";
 
 //ReflectionClass getExtension 
@@ -60,6 +61,14 @@ $property->setAccessible(true);
 $property->setValue($a, 'hi');
 echo $a->getPrivateProperty();
 
+echo "<br><br>";
 
-
+function pass_by_reference(&$param){
+  push_array($param,4,5);
+}
+$ar = array(1,2,3);
+pass_by_reference($ar);
+foreach ($ar as $elem){
+  print "\n $elem";
+}
 ?>
