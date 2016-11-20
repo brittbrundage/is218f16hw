@@ -64,7 +64,7 @@ if(!isset($_COOKIE[$cookie_name])) {
      echo "Value is: " . $_COOKIE[$cookie_name];
 }
 
-echo "**Refresh page to see cookie value<br><br>";
+echo "<br>**Refresh page to see cookie value<br><br>";
 
 //$_SESSION
 
@@ -97,6 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 //$_ENV
 
+echo 'My username is ' .$_ENV["username"] . '!';
 
 
 ?>
