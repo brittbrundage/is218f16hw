@@ -51,7 +51,7 @@ Name: <input type="text" name="name"><br>
 
 <?php
 
-//COOKIES
+//$_COOKIES
 
 $cookie_name = "user";
 $cookie_value = "Brittani";
@@ -65,6 +65,18 @@ if(!isset($_COOKIE[$cookie_name])) {
 }
 echo "<br><br>";
 echo "**Refresh page to see cookie value<br><br>";
+
+//$_SESSION
+
+session_start();
+
+$_SESSION["favoritecolor"] = "red";
+$_SESSION["favoriteanimal"] = "dog";
+echo "Session variables are set.";
+
+//$_REQUEST
+
+//$_ENV
 
 
 
