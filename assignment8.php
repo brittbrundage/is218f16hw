@@ -9,6 +9,15 @@ var_dump($extension);
 
 echo "<br><br>";
 
+//ReflectionClass toString
+
+$string = new ReflectionClass('Exception');
+echo $string->__toString();
+
+echo "<br><br>";
+
+
+
 
 
 ?>
