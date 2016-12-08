@@ -8,5 +8,10 @@
       }
       echo '</ul>';
     }
+	
+	public function link($text, $link){
+      echo "<a href=$link>$text</a>";
+    }
+	
   }
 ?>
