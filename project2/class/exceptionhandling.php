@@ -5,8 +5,8 @@
     public function __construct(){
     }
     
-    function exists($name){
-      $exists = file_exists($name);
+    function exists($firstname){
+      $exists = file_exists($firstname);
       if ($exists) {
         echo "The file does exist.";
       }
@@ -17,14 +17,14 @@
       return $exists;
     }
     
-    function ableToWrite($name){
-      $write = is_writable($name);
+    function ableToWrite($firstname){
+      $write = is_writable($firstname);
 
       return $write;
     }
     
-    function writing($name, $txt){
-        $fp = fopen($name, "w");
+    function writing($firstname, $txt){
+        $fp = fopen($firstname, "w");
         fwrite($fp, $txt);
         fclose($fp);
     }
