@@ -1,5 +1,5 @@
 <?php
-  class FileExceptionHandling{
+  class ExceptionHandling{
     private $priv = true;
     
     public function __construct(){

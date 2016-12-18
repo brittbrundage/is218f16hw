@@ -3,11 +3,24 @@
 <body>
 <?php
 include('bootstrap.php');
+$bmb = new HTMLCreator();
 
-echo 'Brittani Brundage Project 2';
+echo '<b>Brittani Brundage Project 2</b>';
+
+//Exception Handling
+echo '<br><br><b>Exception Handling:</b><br>';
+echo 'Writing...<br>';
+$filehandler= new ExceptionHandling();
+if ($filehandler -> exists("testingfile.txt")){
+	if ($filehandler -> ableToWrite("testingfile.txt")){
+		$filehandler -> writing("testingfile.txt");
+	}
+}
+
+echo '<br><br>';
 
 //Unordered List
-echo 'Cars';
+echo '<b>Cars List:</b>';
 $cars = array('Toyota Supra','Ford Mustang GT', 'Dodge Challengar Hellcat', 'Mitshubushi Eclipse GSX');
 $bmb->UnorderedList($cars);
 
@@ -17,22 +30,16 @@ echo '<br>Lets go to Facebook! ';
 $bmb->link('facebook','http://www.facebook.com/');
 
 //html elements
+echo '<br><br><b>Table:</b><br>';
 $attributes = array(
-    "Name" => array('Brittani', 'Dalibor', 'Tiffani'), 
-    "Age" => array('23' , '26' , '20'),
-    "Current Car" => array('Cobalt SS' , 'Eclipse GSX' , 'Honda Civic')
+    "Name" => array(' Brittani ', ' Dalibor ', ' Tiffani '), 
+    "Age" => array(' 23 ' , ' 26 ' , ' 20 '),
+    "Current Car" => array(' Cobalt SS ' , ' Eclipse GSX ' , ' Honda Civic ')
 );
 
 $vals = array_values($attributes);
 $headers = True;
-$bmb = new HTMLCreator();
 $bmb->table($attributes, $headers);
-
-
-
-
-
-
 
 ?>
 </body>
