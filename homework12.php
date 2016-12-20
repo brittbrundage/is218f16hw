@@ -88,5 +88,12 @@ function getRandomUserAgent()
 
 curl_setopt($ch,CURLOPT_USERAGENT,getRandomUserAgent());
 
+echo "<br><br><b>Handling Redirects</b><br><br>";
+
+curl_setopt($ch,CURLOPT_FOLLOWLOCATION, TRUE);
+curl_setopt($ch, CURLOPT_MAXREDIRS, 4);
+
+
+
 
 ?>
