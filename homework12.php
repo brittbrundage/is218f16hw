@@ -57,5 +57,13 @@ function httpPost($url,$params)
  
 }
 
+//Using HTTP Post
+
+$params = array(
+	"name" => "Brittani Brundage",
+	"state" => "NJ" );
+	
+echo httpPost("httpbin.org/post", $params);
+
 
 ?>
