@@ -93,7 +93,44 @@ echo "<br><br><b>Handling Redirects</b><br><br>";
 curl_setopt($ch,CURLOPT_FOLLOWLOCATION, TRUE);
 curl_setopt($ch, CURLOPT_MAXREDIRS, 4);
 
+echo "<br><br><b>Handling Curl Errors</b><br><br>";
 
+
+function httpGetErrors($url) {
+	$ch = curl_init();
+	
+	curl_setopt($ch, CURLOPT_URL,$url);
+	curl_setopt($ch,CURLOPT_REUTNRTRANSFER,true);
+	
+	$output = curl_exec($ch);
+	
+	if ($output === false) {
+		echo "Error Number: ".curl_errno($ch)."<br>"; // returns error number
+		echo "Error String: ".curl_error($ch)."<br>"; // returns error as a string
+	}
+	curl_close($ch);
+	return $output;
+}
+
+//Exceptions 
+
+function get($url){
+	$ch = curl_init($url);
+	curl_setopt($ch, CURLOPT_RETURNRANSFER,true);
+	$result = curl_exec($ch);
+	if(curl_errno($ch)){
+		throw new Exception(curl_error($ch));
+	}
+	return $result;
+}
+
+//testing
+
+try{
+	$object->get('http://test.com'); }
+	catch(Exception $e) {
+	echo $e->getMessage();	
+	}
 
 
 ?>
