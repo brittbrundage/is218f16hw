@@ -1,13 +1,31 @@
 <head>
 <title> Registered Users</title>
 <link rel="stylesheet" href="style.css" type="text/css">
+
+<ul class="topnav" id="myTopnav">
+  <li><a  href="https://web.njit.edu/~bmb23/is218f16/final/home.php">Home</a></li>
+  <li><a  href="https://web.njit.edu/~bmb23/is218f16/final/welcome.php">My Account</a></li>
+  <li><a  href="https://web.njit.edu/~bmb23/is218f16/final/update.php?user_id=<?php echo $userRow['user_id'];?>">Edit Account</a></li>
+   <li><a class="active"  href="https://web.njit.edu/~bmb23/is218f16/final/users.php">Registered Users</a></li>
+  <li><a href="logout.php"> Logout</a></li>
+    
+</ul>
+
+
 <style>
 table, th, td {
      border: 1px solid black;
+	 
 }
+
 </style>
 </head>
 <body>
+<center>
+
+<br>
+<br>
+
 <?php
 
 
