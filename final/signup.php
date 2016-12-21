@@ -11,10 +11,10 @@
 <?php
 require_once 'dbconfig.php';
 
-if($user->is_loggedin()!="")
-{
-    $user->redirect('home.php');
-}
+//if($user->is_loggedin()!="")
+//{
+   // $user->redirect('home.php');
+//}
 
 if(isset($_POST['btn-signup']))
 {
@@ -55,7 +55,7 @@ if(isset($_POST['btn-signup']))
          {
             if($user->register($fname,$lname,$uname,$umail,$upass)) 
             {
-                $user->redirect('sign-up.php?joined');
+                $user->redirect('welcome.php');
             }
          }
      }
@@ -102,15 +102,15 @@ if(isset($_POST['btn-signup']))
             }
             ?>
             <div class="form-group">
-            <input type="text" class="form-control" name="txt_uname" placeholder="Enter Username" value="<?php if(isset($error)){echo $uname;}?>" /> 
+            <input type="text" class="form-control" name="txt_uname" placeholder="Name" value="<?php if(isset($error)){echo $uname;}?>" /> 
             </div>
             <br />
             <div class="form-group">
-            <input type="text" class="form-control" name="txt_umail" placeholder="Enter Email" value="<?php if(isset($error)){echo $umail;}?>" />
+            <input type="text" class="form-control" name="txt_umail" placeholder="Email" value="<?php if(isset($error)){echo $umail;}?>" />
             </div>
             <br />
             <div class="form-group">
-             <input type="password" class="form-control" name="txt_upass" placeholder="Enter Password" />
+             <input type="password" class="form-control" name="txt_upass" placeholder="Password" />
             </div>
             <div class="clearfix"></div><hr />
             <div class="form-group">
