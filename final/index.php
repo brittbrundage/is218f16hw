@@ -1,5 +1,5 @@
 <html>
-
+<link rel="stylesheet" href="style.css" type="text/css"  />
 <ul class="topnav" id="myTopnav">
   <li><a class="active" href="https://web.njit.edu/~bmb23/is218f16/final/index.php">Home</a></li>
   <li><a href="https://web.njit.edu/~bmb23/is218f16/final/signin.php">Log In</a></li>
@@ -9,7 +9,7 @@
 
 
 <body>
-<body bgcolor="#00BFFF">
+
 
 </body>
 </html>
