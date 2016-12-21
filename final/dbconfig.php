@@ -2,9 +2,9 @@
 
 session_start();
 
-$DB_host = "localhost";
-$DB_user = "root";
-$DB_pass = "";
+$DB_host = "sql1.njit.edu";
+$DB_user = "bmb23";
+$DB_pass = "KBbJwvUJ";
 $DB_name = "bmb23";
 
 try
