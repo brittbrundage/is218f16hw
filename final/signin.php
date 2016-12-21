@@ -9,7 +9,7 @@
 
 
 <body>
-<body bgcolor="#00BFFF">
+
 <?php
 require_once 'dbconfig.php';
 
@@ -46,7 +46,7 @@ if(isset($_POST['btn-login']))
 <div class="container">
      <div class="form-container">
         <form method="post">
-            <h2>Sign in</h2><hr />
+            <h2>Log in</h2><hr />
             <?php
             if(isset($error))
             {
@@ -58,15 +58,16 @@ if(isset($_POST['btn-login']))
             }
             ?>
             <div class="form-group">
-             <input type="text" class="form-control" name="txt_uname_email" placeholder="Username or Email ID" required />
+             <input type="text" class="form-control" name="txt_uname_email" placeholder="Username or Email" required />
             </div>
+            <br />
             <div class="form-group">
              <input type="password" class="form-control" name="txt_password" placeholder="Your Password" required />
             </div>
             <div class="clearfix"></div><hr />
             <div class="form-group">
              <button type="submit" name="btn-login" class="btn btn-block btn-primary">
-                 <i class="glyphicon glyphicon-log-in"></i>&nbsp;Sign in
+                 <i class="glyphicon glyphicon-log-in"></i>Log in
                 </button>
             </div>
             <br />
