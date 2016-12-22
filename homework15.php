@@ -8,7 +8,7 @@ class Model
     public $string;
 
     public function __construct(){
-        $this->string = "MVC + PHP = Awesome!";
+        $this->string = "MVC + PHP = Awesome, click here!";
     }
 }
 
@@ -35,5 +35,13 @@ class Controller
         $this->model = $model;
     }
 }
+
+
+$model = new Model();
+$controller = new Controller($model);
+$view = new View($controller, $model);
+echo $view->output();
+
+
 
 ?>
