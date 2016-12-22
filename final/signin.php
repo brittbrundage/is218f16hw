@@ -15,7 +15,7 @@ require_once 'dbconfig.php';
 
 if($user->is_loggedin()!="")
 {
- $user->redirect('home.php');
+ $user->redirect('welcome.php');
 }
 
 if(isset($_POST['btn-login']))
@@ -26,7 +26,7 @@ if(isset($_POST['btn-login']))
   
  if($user->login($uname,$umail,$upass))
  {
-  $user->redirect('home.php');
+  $user->redirect('welcome.php');
  }
  else
  {
@@ -58,11 +58,11 @@ if(isset($_POST['btn-login']))
             }
             ?>
             <div class="form-group">
-             <input type="text" class="form-control" name="txt_uname_email" placeholder="Username or Email" required />
+             <input type="text" class="form-control" name="txt_uname_email" placeholder="Name or Email" required />
             </div>
             <br />
             <div class="form-group">
-             <input type="password" class="form-control" name="txt_password" placeholder="Your Password" required />
+             <input type="password" class="form-control" name="txt_password" placeholder="Password" required />
             </div>
             <div class="clearfix"></div><hr />
             <div class="form-group">
