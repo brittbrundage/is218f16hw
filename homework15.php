@@ -88,4 +88,14 @@ if (!(empty($model) || empty($view) || empty($controller) || empty($action))) {
     echo $v->output();
 }
 
+class Model2
+{
+    public $tstring;
+
+    public function __construct(){
+        $this->tstring = "The string has been loaded through the template.";
+        $this->template = "tpl/template.php";
+    }
+}
+
 ?>
