@@ -114,5 +114,14 @@ class View2
 }
 
 
-
 ?>
+
+<html>
+ <head>
+  <meta charset="charset=utf-8">
+  <title>The Template name</title>
+ </head>
+ <body>
+  <h1><?php echo $data; ?></h1>
+ </body>
+</html>
